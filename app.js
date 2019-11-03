@@ -3,7 +3,8 @@ const estimateController = require('./controllers/estimate-controller'),
 mongoose = require("mongoose");
 const dotenv = require('dotenv');
 mongoose.connect(process.env.MONGODB_URI || " mongodb://localhost:27017/estimates",
-{useNewUrlParser : true});
+{useNewUrlParser : true,
+useUnifiedTopology: true });
 
 const db = mongoose.connection;
 
