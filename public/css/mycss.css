@@ -373,7 +373,7 @@ body {
   }
 }
 
-@media (max-width:456px){
+@media (max-width:480px){
     #container-services,#second-bunch{
        margin-left:6.5em;
     }
