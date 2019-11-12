@@ -19,7 +19,8 @@ exports.saveEstimate = (req , res) => {
       res.redirect("thanks")
     })
     .catch((error) => {
-      res.send(error);
+      console.log(error);
+      
     })
 
 }
