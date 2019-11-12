@@ -16,7 +16,7 @@ const EstimateSchema = mongoose.Schema({
         required:true,
         sparse:true,
         min: [0000000000, "You are missing a number"],
-        max: 9999999999
+        max: [9999999999, "Sorry cellphone number invalid"]
 
     },
     message:{
