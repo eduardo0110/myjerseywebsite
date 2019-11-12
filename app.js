@@ -2,7 +2,7 @@
 const estimateController = require('./controllers/estimate-controller'),
 mongoose = require("mongoose");
 const dotenv = require('dotenv');
-mongoose.connect(process.env.MONGODB_URI || " mongodb://localhost:27017/estimates",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_fkq871j4:ijniphi7ls26ig3frls48p27pv@ds061621.mlab.com:61621/heroku_fkq871j4",
 {useNewUrlParser : true,
 useUnifiedTopology: true });
 
