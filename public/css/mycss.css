@@ -398,3 +398,10 @@ body {
 #siding,#carpentry{
     text-align:center;
 }
+
+.submit-button{
+    display:inline;
+    background:#FF3860;
+    color:white;
+    float:right;
+}

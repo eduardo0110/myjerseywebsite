@@ -63,11 +63,11 @@
                   
                       <div class="navbar-end">
                         <div class="navbar-item">
-                          <div class="buttons">
+                          <div class="buttons"id="buttons-area">
                             <a class="button is-danger" href="/contact">
                               <strong>Request Estimate</strong>
                             </a>
-                            <a class="button is-warning" href="/thanks">
+                            <a class="button is-warning" id="subscribe"">
                               Subscribe
                             </a>
                           </div>
@@ -75,6 +75,7 @@
                       </div>
                     </div>
                   </nav>
+                
                   <script>
                       $(document).ready(function() {
                 
@@ -87,6 +88,16 @@
                 
                   });
                 });
+                 
+                var subscribeButtom = document.getElementById('subscribe');
+                subscribeButtom.addEventListener("click",function(){
+                
+                  var buttonsArea = document.getElementById('buttons-area').innerHTML = ' <form> <div class=\"newsubscribe" > <label for="email">Please enter your email!:</label> <input type="email" id="email" required></div><input class="submit-button" type="submit" value="Submit"></form>'
+
+                  v
+                                
+                  
+                })
                 
                   </script>
                   </header>
