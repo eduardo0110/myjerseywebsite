@@ -2,7 +2,7 @@
 const estimateController = require('./controllers/estimate-controller'),
 mongoose = require("mongoose");
 const dotenv = require('dotenv');
-mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_fkq871j4:ijniphi7ls26ig3frls48p27pv@ds061621.mlab.com:61621/heroku_xbzjkhmv",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_4bvjt6mq:hidtbhun9gr9kbr95nhepkojcp@ds245348-a0.mlab.com:45348,ds245348-a1.mlab.com:45348/heroku_4bvjt6mq?replicaSet=rs-ds245348",
 {useNewUrlParser : true,
 useUnifiedTopology: true });
 
