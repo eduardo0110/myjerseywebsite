@@ -4,7 +4,8 @@ mongoose = require("mongoose");
 const dotenv = require('dotenv');
 mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_7nrhfz6t:pol75799cbbn8laetiahk450au@ds145358-a0.mlab.com:45358,ds145358-a1.mlab.com:45358/heroku_7nrhfz6t?replicaSet=rs-ds145358",
 {useNewUrlParser : true,
-useUnifiedTopology: true });
+useUnifiedTopology: true ,
+retryWrites=false});
 
 const db = mongoose.connection;
 
