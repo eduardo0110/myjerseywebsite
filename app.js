@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
     app.get('/projects',(req , res) => {
         res.render('projects')
     })
-    pp.get('/thanks',(req , res) => {
+    app.get('/thanks',(req , res) => {
         res.render('thanks')
     })
 //SERVER INIT
