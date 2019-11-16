@@ -1,7 +1,11 @@
-
+//MODULES
 const estimateController = require('./controllers/estimate-controller'),
 mongoose = require("mongoose");
-const dotenv = require('dotenv');
+var sslRedirect = require('heroku-ssl-redirect');
+const express = require('express'),
+//EXPRESSS
+app = express();
+///MONGODB DATABASE
 mongoose.connect(process.env.MONGODB_URI || "mongodb://heroku_7nrhfz6t:pol75799cbbn8laetiahk450au@ds145358-a0.mlab.com:45358,ds145358-a1.mlab.com:45358/heroku_7nrhfz6t?replicaSet=rs-ds145358",
 {useNewUrlParser : true,
 useUnifiedTopology: true ,
@@ -15,10 +19,7 @@ db.once("open",() => {
 mongoose.Promise = global.Promise
 mongoose.set('useCreateIndex', true);
 
-//EXPRESSS
-var sslRedirect = require('heroku-ssl-redirect');
-const express = require('express'),
-app = express();
+
 
 //MIDDLEWARE ON TOP OF EXPRESS
 app.use(express.json());
