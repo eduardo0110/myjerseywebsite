@@ -51,9 +51,9 @@ app.get('/', (req, res) => {
     app.get('/thanks',(req , res) => {
         res.render('thanks')
     });
-    app.get("*" , (req , res)=> {
-        res.render('index')
-    });
+    app.get("*", function(request, response){
+        response.redirect("https://" + request.headers.host + request.url);
+      });
 //SERVER INIT
 
 app.listen(app.get("port") , () => {
