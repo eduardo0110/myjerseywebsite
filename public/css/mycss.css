@@ -127,6 +127,15 @@ body {
     
 }
 
+@media (max-width:480px) {
+    .image-p{
+        position:absolute;
+    left:1em;
+    top:.8em;
+
+    }
+}
+
 .image-p2{
     font-size:2.5em;
     color:#FF3860;
