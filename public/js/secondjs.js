@@ -140,3 +140,26 @@ var slideIndex = 1;
           }
           x[slideIndex7-1].style.display = "block";  
         }
+
+
+        $(document).ready(function() {
+                
+          // Check for click events on the navbar burger icon
+          $(".navbar-burger").click(function() {
+        
+              // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+              $(".navbar-burger").toggleClass("is-active");
+              $(".navbar-menu").toggleClass("is-active");
+        
+          });
+        });
+         
+        var subscribeButtom = document.getElementById('subscribe');
+        subscribeButtom.addEventListener("click",function(){
+        
+          var buttonsArea = document.getElementById('buttons-area').innerHTML = ' <form> <div class=\"newsubscribe" > <label for="email">Please enter your email!:</label> <input type="email" id="email" required></div><input class="submit-button" type="submit" value="Submit"></form>'
+      
+          
+                        
+          
+        })
