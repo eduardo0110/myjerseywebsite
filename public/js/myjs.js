@@ -1,3 +1,5 @@
+
+ <script  type="text/javascript" src="/js/jquery.js"></script>
 $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() { 
