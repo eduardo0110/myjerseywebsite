@@ -15,3 +15,7 @@ exports.internalServerError = (req,res) => {
     res.status(errorCode)
     res.render(`${errorCode} | sorry our application is taking a nap!`);
 };
+
+
+
+module.exports

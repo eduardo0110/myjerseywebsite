@@ -3,7 +3,7 @@ const estimateController = require('./controllers/estimate-controller'),
 mongoose = require("mongoose");
 var sslRedirect = require('heroku-ssl-redirect');
 const express = require('express'),
- errorController = require('/controllers/errorControllers'),
+ errorController = require('./controllers/errorControllers'),
 //EXPRESSS
 app = express();
 
