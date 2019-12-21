@@ -59,14 +59,13 @@ app.get('/', (req, res) => {
         res.render('contact')});
     app.get('/jerseyconstruction.co/*' , (req , res) => {
         res.render('index')});
-    
+        app.use(errorController.pageNotFoundError);
+        app.use(errorController.internalServerError);
     app.get("*", function(request, response){
         response.redirect("https://" + request.headers.host + request.url)
       });
 
-      app.use(errorController.pageNotFoundError);
-      app.use(errorController.internalServerError);
-
+     
 //SERVER INIT
 
 app.listen(app.get("port") , () => {
