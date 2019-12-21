@@ -3,6 +3,7 @@ const estimateController = require('./controllers/estimate-controller'),
 mongoose = require("mongoose");
 var sslRedirect = require('heroku-ssl-redirect');
 const express = require('express'),
+ errorController = require('/controllers/errorControllers'),
 //EXPRESSS
 app = express();
 
@@ -54,9 +55,18 @@ app.get('/', (req, res) => {
     app.get('/thanks',(req , res) => {
         res.render('thanks')
     });
+    app.get('/jerseyconstruction.co/contact/*' , (req , res) => {
+        res.render('contact')});
+    app.get('/jerseyconstruction.co/*' , (req , res) => {
+        res.render('index')});
+    
     app.get("*", function(request, response){
-        response.redirect("https://" + request.headers.host + request.url);
+        response.redirect("https://" + request.headers.host + request.url)
       });
+
+      app.use(errorController.pageNotFoundError);
+      app.use(errorController.internalServerError);
+
 //SERVER INIT
 
 app.listen(app.get("port") , () => {
